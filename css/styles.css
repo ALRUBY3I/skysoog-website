@@ -1,4 +1,4 @@
-/* Main styles for the corporate website */
+/* Complete updated styles.css file with mobile layout fixes */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap') ;
 
 :root {
@@ -136,6 +136,11 @@ header {
   font-size: 24px;
   cursor: pointer;
   color: var(--primary);
+}
+
+/* Mobile controls container - initially hidden */
+.mobile-controls {
+  display: none;
 }
 
 /* Hero Section */
@@ -703,7 +708,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-  /* IMPROVED MOBILE HEADER LAYOUT - NEW DESIGN */
+  /* MOBILE HEADER LAYOUT - IMPROVED VERSION */
   header {
     padding: 10px 0;
   }
@@ -714,7 +719,7 @@ footer {
     position: relative;
   }
   
-  /* Logo centered */
+  /* Logo centered at top */
   .logo {
     text-align: center;
     margin-bottom: 15px;
@@ -725,7 +730,13 @@ footer {
     height: auto;
   }
   
-  /* Container for menu button and language switcher */
+  /* Hide the standalone mobile menu button and language switcher */
+  .header-container > .mobile-menu-btn,
+  .header-container > .language-switcher {
+    display: none;
+  }
+  
+  /* Show and style the mobile-controls container */
   .mobile-controls {
     display: flex;
     justify-content: space-between;
@@ -735,20 +746,24 @@ footer {
   }
   
   /* Mobile menu button on left */
-  .mobile-menu-btn {
+  .mobile-controls .mobile-menu-btn {
     display: block;
     font-size: 20px; /* Smaller size */
     margin: 0;
     padding: 5px 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--primary);
   }
   
   /* Language switcher on right */
-  .language-switcher {
+  .mobile-controls .language-switcher {
     margin: 0;
   }
   
   /* Make language buttons smaller */
-  .language-btn {
+  .mobile-controls .language-btn {
     padding: 4px 8px;
     font-size: 14px;
     margin-left: 5px;
