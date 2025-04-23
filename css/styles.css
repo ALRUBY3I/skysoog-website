@@ -1,5 +1,5 @@
-/* Complete updated styles.css file with mobile layout fixes */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap') ;
+/* Main styles for the corporate website */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
   --primary: #4986e4;
@@ -85,8 +85,12 @@ header {
 .nav-menu a {
   color: var(--text-dark);
   font-weight: 500;
-  position: relative;
   padding: 5px 0;
+  position: relative;
+}
+
+.nav-menu a:hover {
+  color: var(--primary);
 }
 
 .nav-menu a::after {
@@ -100,10 +104,6 @@ header {
   transition: var(--transition);
 }
 
-.nav-menu a:hover {
-  color: var(--primary);
-}
-
 .nav-menu a:hover::after {
   width: 100%;
 }
@@ -114,13 +114,13 @@ header {
 }
 
 .language-btn {
-  padding: 5px 10px;
+  padding: 5px 15px;
   margin-left: 10px;
   border-radius: 4px;
+  font-size: 14px;
   font-weight: 500;
-  color: var(--primary);
-  background-color: transparent;
-  border: 1px solid var(--primary);
+  color: var(--text-dark);
+  background-color: var(--light-gray);
   transition: var(--transition);
 }
 
@@ -134,33 +134,32 @@ header {
   background: none;
   border: none;
   font-size: 24px;
+  color: var(--text-dark);
   cursor: pointer;
-  color: var(--primary);
 }
 
-/* Mobile controls container - initially hidden */
+/* Mobile Controls Container - NEW */
 .mobile-controls {
   display: none;
 }
 
 /* Hero Section */
 .hero {
-  padding: 150px 0 100px;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  background: linear-gradient(to right, #4986e4, #43d9e6);
   color: var(--white);
+  padding: 150px 0 100px;
   text-align: center;
-  margin-top: 0;
 }
 
 .hero h1 {
   font-size: 48px;
-  margin-bottom: 20px;
   font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .hero p {
   font-size: 18px;
-  max-width: 800px;
+  max-width: 700px;
   margin: 0 auto 40px;
 }
 
@@ -173,14 +172,13 @@ header {
 .btn {
   display: inline-block;
   padding: 12px 30px;
-  border-radius: 30px;
+  border-radius: 4px;
   font-weight: 500;
   text-align: center;
   cursor: pointer;
   transition: var(--transition);
   background-color: var(--white);
   color: var(--primary);
-  border: 2px solid var(--white);
 }
 
 .btn:hover {
@@ -190,8 +188,8 @@ header {
 
 .btn-outline {
   background-color: transparent;
-  color: var(--white);
   border: 2px solid var(--white);
+  color: var(--white);
 }
 
 .btn-outline:hover {
@@ -201,23 +199,26 @@ header {
 
 /* Section Styles */
 .section {
-  padding: 80px 0;
+  padding: 100px 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .section-title {
   font-size: 36px;
   font-weight: 700;
-  color: var(--primary);
-  text-align: center;
+  color: var(--text-dark);
   margin-bottom: 15px;
 }
 
 .section-subtitle {
   font-size: 18px;
   color: var(--text-light);
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 50px;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 /* Services Section */
@@ -225,16 +226,16 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
-  margin-top: 50px;
 }
 
 .service-card {
   background-color: var(--white);
-  border-radius: 10px;
-  padding: 30px;
+  border-radius: 8px;
   box-shadow: var(--shadow);
+  padding: 30px;
   transition: var(--transition);
-  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .service-card:hover {
@@ -243,59 +244,54 @@ header {
 }
 
 .service-icon {
-  width: 70px;
-  height: 70px;
-  background-color: rgba(73, 134, 228, 0.1);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 20px;
-}
-
-.service-icon i {
-  font-size: 30px;
+  font-size: 40px;
   color: var(--primary);
+  margin-bottom: 20px;
 }
 
 .service-card h3 {
   font-size: 22px;
   font-weight: 600;
-  margin-bottom: 15px;
   color: var(--text-dark);
+  margin-bottom: 15px;
 }
 
 .service-card p {
-  color: var(--text-light);
   margin-bottom: 20px;
 }
 
 .btn-text {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
   color: var(--primary);
-  font-weight: 600;
-  position: relative;
-  display: inline-block;
 }
 
-.btn-text::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--primary);
+.btn-text i {
+  margin-left: 5px;
   transition: var(--transition);
 }
 
-.btn-text:hover::after {
+.btn-text:hover i {
+  transform: translateX(5px);
+}
+
+.service-image {
   width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-top: 20px;
 }
 
 /* Benefits Section */
 .benefits-section {
   background-color: var(--light-gray);
-  padding: 80px 0;
+  padding: 100px 0;
+}
+
+.benefits-title {
+  color: var(--primary);
 }
 
 .benefits-container {
@@ -305,83 +301,80 @@ header {
   align-items: center;
 }
 
-.benefit-image img {
-  border-radius: 10px;
-  box-shadow: var(--shadow);
-  width: 100%;
-}
-
 .benefit-content {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 30px;
 }
 
 .benefit-item {
   display: flex;
   align-items: flex-start;
-  gap: 20px;
 }
 
 .benefit-icon {
-  width: 50px;
-  height: 50px;
+  font-size: 24px;
+  color: var(--primary);
+  margin-right: 15px;
+  padding: 10px;
   background-color: rgba(73, 134, 228, 0.1);
   border-radius: 50%;
+  min-width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-}
-
-.benefit-icon i {
-  font-size: 20px;
-  color: var(--primary);
 }
 
 .benefit-text h3 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
-  margin-bottom: 10px;
   color: var(--text-dark);
+  margin-bottom: 10px;
 }
 
-.benefit-text p {
-  color: var(--text-light);
+.benefit-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
 }
 
 /* Testimonials Section */
 .testimonials-section {
-  padding: 80px 0;
+  padding: 100px 0;
 }
 
 .testimonials-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 50px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .testimonial-card {
   background-color: var(--white);
-  border-radius: 10px;
-  padding: 30px;
+  border-radius: 8px;
   box-shadow: var(--shadow);
+  padding: 30px;
+  margin-bottom: 30px;
 }
 
 .testimonial-content {
+  font-style: italic;
   margin-bottom: 20px;
+  position: relative;
 }
 
-.testimonial-content p {
-  font-style: italic;
-  color: var(--text-dark);
+.testimonial-content::before {
+  content: '"';
+  font-size: 60px;
+  color: rgba(73, 134, 228, 0.1);
+  position: absolute;
+  top: -20px;
+  left: -10px;
 }
 
 .testimonial-author {
   display: flex;
   align-items: center;
-  gap: 15px;
 }
 
 .testimonial-author img {
@@ -389,6 +382,7 @@ header {
   height: 60px;
   border-radius: 50%;
   object-fit: cover;
+  margin-right: 15px;
 }
 
 .author-info h4 {
@@ -397,15 +391,10 @@ header {
   color: var(--text-dark);
 }
 
-.author-info p {
-  font-size: 14px;
-  color: var(--text-light);
-}
-
 /* About Section */
 .about-section {
-  background-color: var(--light-gray);
-  padding: 80px 0;
+  padding: 100px 0;
+  background-color: var(--white);
 }
 
 .about-container {
@@ -417,18 +406,18 @@ header {
 
 .about-content p {
   margin-bottom: 20px;
-  color: var(--text-light);
 }
 
 .about-image img {
-  border-radius: 10px;
-  box-shadow: var(--shadow);
   width: 100%;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
 }
 
 /* Contact Section */
 .contact-section {
-  padding: 80px 0;
+  padding: 100px 0;
+  background-color: var(--light-gray);
 }
 
 .contact-container {
@@ -438,76 +427,57 @@ header {
 }
 
 .contact-info {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 30px;
 }
 
 .contact-item {
   display: flex;
   align-items: flex-start;
-  gap: 20px;
 }
 
 .contact-icon {
-  width: 50px;
-  height: 50px;
+  font-size: 24px;
+  color: var(--primary);
+  margin-right: 15px;
+  padding: 10px;
   background-color: rgba(73, 134, 228, 0.1);
   border-radius: 50%;
+  min-width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-}
-
-.contact-icon i {
-  font-size: 20px;
-  color: var(--primary);
 }
 
 .contact-text h3 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
-  margin-bottom: 5px;
   color: var(--text-dark);
-}
-
-.contact-text p, .contact-text a {
-  color: var(--text-light);
-}
-
-.contact-form {
-  background-color: var(--white);
-  border-radius: 10px;
-  padding: 30px;
-  box-shadow: var(--shadow);
+  margin-bottom: 5px;
 }
 
 .contact-form h3 {
   font-size: 24px;
   font-weight: 600;
-  margin-bottom: 20px;
   color: var(--text-dark);
+  margin-bottom: 20px;
 }
 
 .form-group {
   margin-bottom: 20px;
 }
 
-.form-group input, .form-group textarea {
+.form-group input,
+.form-group textarea {
   width: 100%;
   padding: 12px 15px;
   border: 1px solid var(--medium-gray);
-  border-radius: 5px;
-  font-family: 'Poppins', sans-serif;
+  border-radius: 4px;
+  font-family: inherit;
   font-size: 16px;
-  color: var(--text-dark);
   transition: var(--transition);
-}
-
-.form-group input:focus, .form-group textarea:focus {
-  border-color: var(--primary);
-  outline: none;
 }
 
 .form-group textarea {
@@ -515,20 +485,27 @@ header {
   resize: vertical;
 }
 
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
 .btn-primary {
   display: inline-block;
   padding: 12px 30px;
+  border-radius: 4px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
   background-color: var(--primary);
   color: var(--white);
   border: none;
-  border-radius: 30px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: var(--transition);
 }
 
 .btn-primary:hover {
-  background-color: var(--secondary);
+  background-color: #3a75d0;
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
@@ -537,7 +514,7 @@ header {
 footer {
   background-color: var(--dark);
   color: var(--white);
-  padding: 80px 0 20px;
+  padding: 80px 0 30px;
 }
 
 .footer-container {
@@ -548,7 +525,7 @@ footer {
 }
 
 .footer-about {
-  max-width: 400px;
+  grid-column: span 1;
 }
 
 .footer-logo {
@@ -556,28 +533,23 @@ footer {
 }
 
 .footer-logo img {
-  height: 70px;
-  width: auto;
-}
-
-.footer-about p {
-  margin-bottom: 20px;
-  color: rgba(255, 255, 255, 0.7);
+  height: 60px;
 }
 
 .social-links {
   display: flex;
   gap: 15px;
+  margin-top: 20px;
 }
 
 .social-links a {
-  width: 40px;
-  height: 40px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
   color: var(--white);
   transition: var(--transition);
 }
@@ -594,185 +566,125 @@ footer {
   color: var(--white);
 }
 
-.footer-links ul {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.footer-links ul li {
+  margin-bottom: 10px;
 }
 
-.footer-links a {
-  color: rgba(255, 255, 255, 0.7);
-  transition: var(--transition);
-}
-
-.footer-links a:hover {
-  color: var(--white);
+.footer-links ul li a:hover {
+  color: var(--primary);
   padding-left: 5px;
 }
 
 .footer-contact p {
   display: flex;
   align-items: center;
-  gap: 10px;
   margin-bottom: 15px;
-  color: rgba(255, 255, 255, 0.7);
 }
 
-.footer-contact i {
+.footer-contact p i {
+  margin-right: 10px;
   color: var(--primary);
-}
-
-.footer-contact a {
-  color: rgba(255, 255, 255, 0.7);
-  transition: var(--transition);
-}
-
-.footer-contact a:hover {
-  color: var(--white);
 }
 
 .footer-bottom {
   text-align: center;
-  padding-top: 20px;
+  padding-top: 30px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.footer-bottom p {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 14px;
+.footer-bottom a {
+  color: var(--primary);
 }
 
-.service-image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-top: 20px;
-  box-shadow: var(--shadow);
+.footer-bottom a:hover {
+  text-decoration: underline;
 }
 
-.section-header h2.benefits-title {
-  color: #4986e4;
+/* WhatsApp Button */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  transition: var(--transition);
 }
 
-/* Section heading colors to match Corporate Flight Booking */
-.section-header h2 {
-  color: #4986e4;
-}
-
-.section-title {
-  color: #4986e4;
-}
-
-#about .section-header h2,
-#testimonials .section-header h2,
-#contact .section-header h2 {
-  color: #4986e4;
-}
-
-/* Add spacing between contact section subtitle and location information */
-.contact-section .section-header {
-  margin-bottom: 40px;
-}
-
-.contact-info {
-  margin-top: 30px;
-}
-
-.contact-item:first-child {
-  margin-top: 20px;
-}
-
-/* Ensure consistent spacing in both language versions */
-#contact .section-header p,
-.ar-contact .section-header p {
-  margin-bottom: 30px;
+.whatsapp-btn:hover {
+  transform: scale(1.1);
 }
 
 /* Responsive Styles */
 @media (max-width: 992px) {
-  .benefits-container, .about-container, .contact-container {
+  .benefits-container,
+  .about-container,
+  .contact-container {
     grid-template-columns: 1fr;
+    gap: 40px;
   }
   
-  .benefit-image, .about-image {
-    order: -1;
+  .benefit-content {
+    order: 2;
+  }
+  
+  .benefit-image {
+    order: 1;
   }
   
   .footer-container {
     grid-template-columns: 1fr 1fr;
   }
-  
-  .footer-about {
-    grid-column: span 2;
-  }
 }
 
 @media (max-width: 768px) {
-  /* MOBILE HEADER LAYOUT - IMPROVED VERSION */
-  header {
-    padding: 10px 0;
-  }
-  
+  /* Header for mobile */
   .header-container {
     flex-direction: column;
     align-items: center;
-    position: relative;
   }
   
-  /* Logo centered at top */
   .logo {
+    margin-bottom: 10px;
     text-align: center;
-    margin-bottom: 15px;
   }
   
-  .logo img {
-    max-width: 200px;
-    height: auto;
-  }
-  
-  /* Hide the standalone mobile menu button and language switcher */
-  .header-container > .mobile-menu-btn,
-  .header-container > .language-switcher {
-    display: none;
-  }
-  
-  /* Show and style the mobile-controls container */
+  /* Mobile Controls - NEW */
   .mobile-controls {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 0 15px;
+    margin-top: 10px;
   }
   
-  /* Mobile menu button on left */
-  .mobile-controls .mobile-menu-btn {
+  .mobile-menu-btn {
     display: block;
-    font-size: 20px; /* Smaller size */
-    margin: 0;
-    padding: 5px 10px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: var(--primary);
+    font-size: 20px;
+    padding: 5px;
   }
   
-  /* Language switcher on right */
-  .mobile-controls .language-switcher {
-    margin: 0;
+  .language-switcher {
+    margin-left: auto;
   }
   
-  /* Make language buttons smaller */
-  .mobile-controls .language-btn {
-    padding: 4px 8px;
-    font-size: 14px;
-    margin-left: 5px;
+  .language-btn {
+    padding: 4px 12px;
+    font-size: 13px;
   }
   
-  /* Vertical navigation menu */
+  /* Hide desktop navigation */
   .nav-menu {
     position: fixed;
-    top: 120px; /* Adjusted for new header height */
+    top: 120px; /* Adjust based on header height */
     left: -100%;
     width: 100%;
     height: calc(100vh - 120px);
