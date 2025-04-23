@@ -1,5 +1,5 @@
 /* Main styles for the corporate website */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap') ;
 
 :root {
   --primary: #4986e4;
@@ -717,7 +717,7 @@ footer {
   /* Logo centered */
   .logo {
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
   
   .logo img {
@@ -729,23 +729,29 @@ footer {
   .mobile-controls {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     padding: 0 15px;
-    margin-top: 5px;
   }
   
   /* Mobile menu button on left */
   .mobile-menu-btn {
     display: block;
-    font-size: 24px;
-    order: 1;
+    font-size: 20px; /* Smaller size */
     margin: 0;
+    padding: 5px 10px;
   }
   
   /* Language switcher on right */
   .language-switcher {
-    order: 2;
     margin: 0;
+  }
+  
+  /* Make language buttons smaller */
+  .language-btn {
+    padding: 4px 8px;
+    font-size: 14px;
+    margin-left: 5px;
   }
   
   /* Vertical navigation menu */
@@ -755,12 +761,12 @@ footer {
     left: -100%;
     width: 100%;
     height: calc(100vh - 120px);
-    background-color: var(--white);
+    background-color: white;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     padding-top: 30px;
-    transition: var(--transition);
+    transition: all 0.3s ease;
     z-index: 999;
   }
   
@@ -782,15 +788,7 @@ footer {
   
   /* Adjust hero section for new header height */
   .hero {
-    padding-top: 180px;
-  }
-  
-  .hero h1 {
-    font-size: 36px;
-  }
-  
-  .hero p {
-    font-size: 16px;
+    padding-top: 160px;
   }
   
   .footer-container {
