@@ -1,0 +1,70 @@
+/* RTL styles for Arabic version */
+body {
+  direction: rtl;
+  text-align: right;
+}
+
+.nav-menu li {
+  margin: 0 0 0 15px;
+}
+
+.language-btn {
+  margin-right: 10px;
+  margin-left: 0;
+}
+
+.btn-text i {
+  margin-right: 5px;
+  margin-left: 0;
+}
+
+.btn-text:hover i {
+  transform: translateX(-5px);
+}
+
+.benefit-icon {
+  margin-left: 15px;
+  margin-right: 0;
+}
+
+.testimonial-content::before {
+  right: -10px;
+  left: auto;
+}
+
+.testimonial-author img {
+  margin-left: 15px;
+  margin-right: 0;
+}
+
+.contact-icon {
+  margin-left: 15px;
+  margin-right: 0;
+}
+
+.footer-contact p i {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+/* Mobile specific RTL adjustments */
+@media (max-width: 768px) {
+  .mobile-controls {
+    flex-direction: row-reverse;
+  }
+  
+  .language-switcher {
+    margin-right: auto;
+    margin-left: 0;
+  }
+  
+  .nav-menu {
+    right: -100%;
+    left: auto;
+  }
+  
+  .nav-menu.active {
+    right: 0;
+    left: auto;
+  }
+}
