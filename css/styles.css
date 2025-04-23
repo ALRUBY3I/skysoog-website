@@ -703,49 +703,55 @@ footer {
 }
 
 @media (max-width: 768px) {
-  /* IMPROVED MOBILE HEADER LAYOUT - STACKED DESIGN */
-  header, .header-container {
-    display: flex;
+  /* IMPROVED MOBILE HEADER LAYOUT - NEW DESIGN */
+  header {
+    padding: 10px 0;
+  }
+  
+  .header-container {
     flex-direction: column;
     align-items: center;
-    padding: 10px 5px;
+    position: relative;
   }
   
-  /* Logo styling for mobile */
+  /* Logo centered */
   .logo {
-    margin-bottom: 15px;
     text-align: center;
-  }
-  
-  .logo img {
-    max-width: 220px;
-    height: auto;
     margin-bottom: 10px;
   }
   
-  /* Language switcher container for mobile */
-  .language-switcher {
-    margin-top: 10px;
+  .logo img {
+    max-width: 200px;
+    height: auto;
+  }
+  
+  /* Container for menu button and language switcher */
+  .mobile-controls {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
+    padding: 0 15px;
+    margin-top: 5px;
   }
   
-  /* Language buttons for mobile */
-  .language-btn {
-    padding: 5px 15px;
-    margin: 0 5px;
-  }
-  
-  /* Original mobile menu styles */
+  /* Mobile menu button on left */
   .mobile-menu-btn {
     display: block;
-    margin-top: 10px;
+    font-size: 24px;
+    order: 1;
+    margin: 0;
   }
   
+  /* Language switcher on right */
+  .language-switcher {
+    order: 2;
+    margin: 0;
+  }
+  
+  /* Vertical navigation menu */
   .nav-menu {
     position: fixed;
-    top: 120px; /* Adjusted to account for stacked header */
+    top: 120px; /* Adjusted for new header height */
     left: -100%;
     width: 100%;
     height: calc(100vh - 120px);
@@ -753,7 +759,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding-top: 50px;
+    padding-top: 30px;
     transition: var(--transition);
     z-index: 999;
   }
@@ -764,10 +770,19 @@ footer {
   
   .nav-menu li {
     margin: 15px 0;
+    width: 100%;
+    text-align: center;
   }
   
+  .nav-menu a {
+    display: block;
+    padding: 10px 0;
+    font-size: 18px;
+  }
+  
+  /* Adjust hero section for new header height */
   .hero {
-    padding-top: 180px; /* Adjusted for taller header */
+    padding-top: 180px;
   }
   
   .hero h1 {
