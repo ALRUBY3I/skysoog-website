@@ -1,0 +1,162 @@
+
+/* === Contact Section RTL Fix === */
+.contact-item {
+  display: flex; /* Ensure flex display */
+  flex-direction: row-reverse; /* Icon on the right */
+  align-items: center; /* Vertically align icon and text */
+  margin-bottom: 20px; /* Space between items */
+}
+
+.contact-icon {
+  margin-left: 15px; /* Space between icon (right) and text (left) */
+  margin-right: 0;
+  flex-shrink: 0; /* Prevent icon shrinking */
+  width: 30px; /* Give icon fixed width */
+  text-align: center;
+}
+
+.contact-text {
+  text-align: right; /* Ensure text is right-aligned */
+  flex-grow: 1;
+}
+
+.contact-text h3 {
+    margin-bottom: 5px;
+}
+
+.contact-text p {
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+/* === Footer Contact RTL Fix === */
+.footer-contact p {
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: row-reverse; /* Icon on the right */
+  align-items: center; /* Vertically align icon and text */
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.footer-contact i {
+  margin-left: 10px; /* Space between icon (right) and text (left) */
+  margin-right: 0;
+  width: 20px; /* Give icon fixed width */
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* Keep LTR text like phone/email displayed correctly */
+.footer-contact p a,
+.contact-text p a {
+    direction: ltr;
+    unicode-bidi: embed;
+    display: inline-block;
+}
+
+
+
+/* === Center Align Services Section Header === */
+#services .section-title,
+#services .section-subtitle {
+    text-align: center;
+}
+
+
+
+/* === Contact Form RTL Alignment === */
+.contact-form input,
+.contact-form textarea {
+    text-align: right;
+    direction: rtl; /* Explicitly set direction */
+}
+
+/* Ensure placeholder text is also right-aligned (redundant but safe) */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    text-align: right;
+    direction: rtl;
+}
+
+
+
+/* === Header Navigation RTL Fix (Desktop) === */
+@media (min-width: 769px) {
+  html[dir="rtl"] header .nav-menu {
+    flex-direction: row-reverse; /* Reverse item order */
+  }
+
+  html[dir="rtl"] header .nav-menu li {
+    margin: 0 0 0 15px; /* Adjust margin for RTL */
+    margin-right: 0; /* Explicitly remove right margin */
+  }
+}
+
+
+/* === About Section Subtitle Alignment === */
+.about-section .section-header {
+  text-align: right;
+}
+
+.about-section .section-header .section-subtitle {
+  text-align: right;
+  margin-right: 0;
+  margin-left: auto;
+  max-width: none;
+}
+
+/* === Benefits Section RTL Layout === */
+@media (min-width: 769px) {
+  html[dir="rtl"] .benefits-container {
+    direction: rtl;
+  }
+  
+  html[dir="rtl"] .benefits-container .benefit-image {
+    order: 2; /* Move image to the left in RTL */
+  }
+  
+  html[dir="rtl"] .benefits-container .benefit-content {
+    order: 1; /* Move content to the right in RTL */
+  }
+}
+
+/* === Benefits Section Header Alignment === */
+.benefits-section .section-header {
+  text-align: right;
+}
+
+/* === Contact Section RTL Icon Placement === */
+.contact-item {
+  flex-direction: row-reverse; /* Icon on right, text on left */
+}
+
+.contact-icon {
+  margin-left: 15px;
+  margin-right: 0;
+}
+
+.contact-text {
+  text-align: right;
+}
+
+/* === Footer Contact RTL Icon Placement === */
+.footer-contact p {
+  flex-direction: row-reverse; /* Icon on right, text on left */
+}
+
+.footer-contact i {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+
+/* === Benefits Section RTL Icon Placement === */
+html[dir="rtl"] .benefit-item {
+  flex-direction: row-reverse; /* Ensure icon is on the right */
+}
+
+html[dir="rtl"] .benefit-icon {
+  margin-left: 20px; /* Space between icon (right) and text (left) */
+  margin-right: 0;
+}
+
