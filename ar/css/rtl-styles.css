@@ -1,0 +1,542 @@
+/* Arabic RTL Mobile Menu Styles */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary: #4986e4;
+  --secondary: #43d9e6;
+  --white: #fffefe;
+  --dark: #333333;
+  --light-gray: #f5f5f5;
+  --medium-gray: #e0e0e0;
+  --text-dark: #5d6d7e;
+  --text-light: #7f8c8d;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: 'Tajawal', sans-serif;
+  direction: rtl;
+  text-align: right;
+  color: var(--text-light);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary);
+}
+
+p, li, span, a:not(.btn) {
+  color: var(--text-light);
+}
+
+.header-container {
+  flex-direction: row-reverse;
+}
+
+.logo img {
+  height: 80px; /* Restore original logo size for desktop */
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    height: 40px; /* Smaller logo for mobile only */
+    width: auto;
+  }
+}
+
+.nav-menu {
+  flex-direction: row-reverse;
+}
+
+.nav-menu li {
+  margin: 0 0 0 15px;
+}
+
+.nav-menu a::after {
+  right: 0;
+  left: auto;
+}
+
+.language-switcher {
+  flex-direction: row-reverse;
+}
+
+.language-btn {
+  margin-right: 10px;
+  margin-left: 0;
+}
+
+.hero-btns {
+  flex-direction: row-reverse;
+}
+
+.feature-icon {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.testimonial-author {
+  flex-direction: row-reverse;
+}
+
+.testimonial-author img {
+  margin-left: 15px;
+  margin-right: 0;
+  width: 100px;
+  height: auto;
+  border-radius: 0;
+  object-fit: contain;
+}
+
+.feature-item {
+  flex-direction: row-reverse;
+}
+
+.contact-item {
+  flex-direction: row-reverse;
+}
+
+.contact-icon {
+  margin-left: 15px;
+  margin-right: 0;
+}
+
+.social-links {
+  flex-direction: row-reverse;
+}
+
+.footer-title::after {
+  right: 0;
+  left: auto;
+}
+
+.footer-links a:hover {
+  padding-right: 5px;
+  padding-left: 0;
+}
+
+.footer-contact p {
+  flex-direction: row-reverse;
+}
+
+.footer-contact i {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.testimonial-content::before {
+  right: -10px;
+  left: auto;
+}
+
+/* Fix for Arabic layout issues */
+.hero {
+  text-align: right;
+  background: url('../images/hero-bg.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.section-title, 
+.section-subtitle {
+  text-align: right;
+}
+
+.benefit-card,
+.testimonial-card {
+  text-align: right;
+}
+
+.about-content {
+  flex-direction: row-reverse;
+}
+
+.service-card h3 {
+  color: var(--text-dark);
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  color: var(--text-light);
+}
+
+.service-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+/* Benefits section */
+.benefit-title {
+  color: var(--primary);
+}
+
+.benefits-title {
+  color: var(--primary);
+}
+
+.benefit-text h3 {
+  color: var(--text-dark);
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.benefit-description {
+  color: var(--text-light);
+}
+
+/* Testimonials */
+.testimonial-content {
+  color: var(--text-light);
+}
+
+.testimonial-author-name {
+  color: var(--text-dark);
+}
+
+.testimonial-author-title {
+  color: var(--text-light);
+}
+
+/* About section */
+.about-title {
+  color: var(--primary);
+}
+
+.about-description {
+  color: var(--text-light);
+}
+
+/* Contact section */
+.contact-title {
+  color: var(--primary);
+}
+
+.contact-text h3 {
+  color: var(--text-dark);
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.contact-info {
+  color: var(--text-light);
+}
+
+.contact-form h3 {
+  color: var(--text-dark);
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+.footer-title {
+  color: var(--white);
+}
+
+.footer-about p,
+.footer-links a,
+.footer-contact p,
+.footer-bottom p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* COMPLETELY REBUILT MOBILE MENU FOR RTL */
+@media (max-width: 768px) {
+  /* Header layout for mobile */
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+  
+  .logo {
+    margin-bottom: 10px;
+  }
+  
+  /* Mobile controls container */
+  .mobile-controls {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  /* Language switcher positioning */
+  .language-switcher {
+    order: 2;
+  }
+  
+  /* Menu button positioning */
+  .mobile-menu-btn {
+    display: block;
+    order: 1;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--primary);
+  }
+  
+  .mobile-menu-btn i.fa-times {
+    color: #777777;
+    display: inline-block !important;
+    visibility: visible !important;
+    font-size: 28px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1000;
+  }
+  
+  /* Mobile menu positioning and animation */
+  .nav-menu {
+    position: fixed;
+    top: 80px;
+    right: -100%; /* Start position off-screen on the right for RTL */
+    left: auto;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-color: var(--white);
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* padding-top: 20px; */ /* Removed to fix gap */
+    transition: all 0.3s ease;
+    z-index: 999;
+    text-align: center;
+  }
+  
+  /* Active state - slide in from right */
+  .nav-menu.active {
+    right: 0;
+    left: auto;
+    display: flex;
+    flex-direction: column-reverse; /* Reverse order for mobile */
+    justify-content: flex-end; /* Align items to the end (top in reverse) */
+  }
+  
+  /* Menu items styling */
+  .nav-menu li {
+    margin: 15px 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .nav-menu a {
+    display: block;
+    padding: 10px 0;
+    font-size: 18px;
+  }
+}
+
+/* Additional fixes for Arabic layout */
+.hero h1,
+.hero p {
+  text-align: right;
+}
+
+.service-content {
+  text-align: right;
+}
+
+.footer-bottom {
+  text-align: center;
+}
+
+/* Fix for form alignment */
+.form-group label {
+  text-align: right;
+}
+
+/* Fix for benefit icons */
+.benefit-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Fix for testimonial quotes */
+.testimonial-content {
+  padding-right: 30px;
+  padding-left: 0;
+}
+
+/* Arabic section heading colors to match Corporate Flight Booking */
+.section-header h2 {
+  color: var(--primary);
+}
+
+#about .section-header h2,
+#testimonials .section-header h2,
+#contact .section-header h2 {
+  color: var(--primary);
+}
+
+/* Hero section text color */
+.hero h1 {
+  color: var(--white);
+}
+
+.hero p {
+  color: var(--white);
+  text-align: center; /* Center align the hero paragraph */
+}
+
+/* Section Divider Style */
+.section-divider {
+  height: 1px;
+  background-color: var(--medium-gray);
+  margin: 60px auto;
+  width: 80%;
+  max-width: 800px;
+}
+
+/* Mobile compatibility for section dividers */
+@media (max-width: 768px) {
+  .section-divider {
+    margin: 40px auto;
+    width: 90%;
+  }
+}
+
+
+
+/* Set contact info headings to grey */
+.contact-info .contact-text h3 {
+  color: var(--text-dark); /* Match English version grey */
+}
+
+
+
+/* Ensure service cards have equal height for alignment (RTL) */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+  align-items: stretch; /* Stretch items to fill the grid cell height */
+}
+
+.service-card {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  text-align: center; /* Center text elements like the button */
+  position: relative;
+  overflow: hidden;
+  display: flex; /* Use flexbox for internal alignment */
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: space-between; /* Push content apart */
+}
+
+.service-card-content {
+    flex-grow: 1; /* Allow content area to grow */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center icon, title, p */
+}
+
+.service-card .service-icon {
+    margin-bottom: 20px; /* Keep existing margin */
+}
+
+.service-card h3 {
+    margin-bottom: 15px; /* Keep existing margin */
+}
+
+.service-card p {
+    margin-bottom: 20px; /* Keep existing margin */
+    flex-grow: 1; /* Allow paragraph to take up space */
+}
+
+.service-card .btn-text {
+    margin-top: auto; /* Push Learn More to the bottom */
+}
+
+.service-card .service-image {
+    margin-top: 20px; /* Keep existing margin */
+    width: 100%;
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Ensure image covers the area */
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+
+
+/* Ensure consistent height for Benefits and About images (RTL) */
+.benefit-image img,
+.about-image img {
+  width: 100%;
+  height: 400px; /* Fixed height */
+  object-fit: cover; /* Ensure image covers the area */
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+
+
+@media (max-width: 768px) {
+  /* Adjust image heights for mobile (RTL) */
+  .service-image,
+  .benefit-image img,
+  .about-image img {
+    height: auto; /* Let height adjust based on width */
+  }
+}
+
+
+
+/* Ensure Arabic Learn More button uses primary color */
+.service-card .btn-text {
+    color: var(--primary);
+}
+
+
+
+/* Ensure consistent font size for specific Arabic section titles */
+#services .section-title,
+#testimonials .section-title,
+#about .section-title,
+#contact .section-title,
+#benefits .benefits-title { /* Include Benefits title for consistency */
+  font-size: 36px; /* Match the base section-title size from styles.css */
+}
+
+/* Adjust for mobile */
+@media (max-width: 576px) {
+  #services .section-title,
+  #testimonials .section-title,
+  #about .section-title,
+  #contact .section-title,
+  #benefits .benefits-title {
+    font-size: 28px; /* Match the base mobile section-title size from styles.css */
+  }
+}
+
+
+
+/* Ensure Tajawal font is applied to About Us content paragraphs */
+.about-page-section .about-content p {
+  font-family: 'Tajawal', sans-serif;
+}
+
+
+
+/* Ensure reduced section spacing for Arabic */
+.section {
+  padding: 60px 0; /* Reduced padding */
+}
+
