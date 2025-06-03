@@ -1,0 +1,151 @@
+/* Custom backgrounds for SkySoog website */
+
+/* Testimonials section background with SVG world map */
+.testimonials-section {
+    position: relative;
+    background-color: #f0f8ff !important; /* Light blue background */
+    padding: 60px 0 !important;
+}
+
+/* Background image using pseudo-element to control opacity separately from content */
+.testimonials-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/backgrounds/world-map-bg.png') !important;
+    background-size: contain !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    opacity: 0.1 !important; /* Extremely light - reduced by 90% as requested */
+    z-index: 0 !important;
+    pointer-events: none !important;
+}
+
+/* Ensure content remains at full opacity */
+.testimonials-section > * {
+    position: relative !important;
+    z-index: 1 !important;
+    opacity: 1 !important;
+}
+
+/* Modern boxed design for testimonials */
+.testimonials-container {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 30px !important;
+    margin-top: 40px !important;
+}
+
+.testimonial-card {
+    background-color: white !important;
+    border-radius: 12px !important;
+    box-shadow: 0 8px 24px rgba(0, 51, 102, 0.1) !important;
+    padding: 30px !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    max-width: 450px !important;
+    width: 100% !important;
+    position: relative !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(0, 51, 102, 0.05) !important;
+}
+
+.testimonial-card::before {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 5px !important;
+    background: linear-gradient(90deg, #0066cc, #00aaff) !important;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 12px 30px rgba(0, 51, 102, 0.15) !important;
+}
+
+.testimonial-content {
+    margin-bottom: 20px !important;
+    position: relative !important;
+}
+
+.testimonial-content::before {
+    content: '"' !important;
+    font-size: 60px !important;
+    color: rgba(0, 51, 102, 0.1) !important;
+    position: absolute !important;
+    top: -20px !important;
+    left: -10px !important;
+    font-family: Georgia, serif !important;
+}
+
+.testimonial-content p {
+    font-style: italic !important;
+    color: #333 !important;
+    line-height: 1.6 !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.testimonial-author {
+    display: flex !important;
+    align-items: center !important;
+    border-top: 1px solid rgba(0, 51, 102, 0.1) !important;
+    padding-top: 20px !important;
+}
+
+.testimonial-author img {
+    width: 60px !important;
+    height: auto !important;
+    border-radius: 50% !important;
+    margin-right: 15px !important;
+    border: 2px solid #f0f8ff !important;
+}
+
+.author-info h4 {
+    margin: 0 0 5px 0 !important;
+    color: #0066cc !important;
+    font-weight: 600 !important;
+}
+
+.author-info p {
+    margin: 0 !important;
+    color: #666 !important;
+    font-size: 0.9em !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .testimonial-card {
+        padding: 25px !important;
+    }
+    
+    .testimonials-container {
+        gap: 20px !important;
+    }
+}
+
+/* Footer background with dark dotted contrast */
+footer {
+    position: relative !important;
+    background-color: #0a1a2f !important;
+}
+
+/* Direct background application with higher visibility */
+footer {
+    background-image: url('../images/backgrounds/footer-bg.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-blend-mode: soft-light !important;
+}
+
+/* Override any competing styles */
+footer {
+    position: relative !important;
+    z-index: 0 !important;
+}
